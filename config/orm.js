@@ -12,10 +12,11 @@ const orm = {
     },
 
     insertOne: function(table,column1,column2,new_burger,is_devoured,cb) {
+        console.log("aaaaaaaaaaaaaaaaaa");
         const sqlQuery = "INSERT INTO ?? (??,??) VALUES (?,?)";
         connection.query(sqlQuery,[table,column1,column2,new_burger,is_devoured], 
             function(error,result) {
-                if (erroor) throw error;
+                if (error) throw error;
                 cb(result);
             })
     },

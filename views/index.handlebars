@@ -5,11 +5,11 @@
 
     <h1>On the plate:</h1>
 
-    <ul>
+    
       {{#each burgers}}
           {{> burgers/burger-block}}
       {{/each}}
-    </ul>
+    
   </div>
 
   <!-- MIDDLE -->
@@ -22,10 +22,10 @@
 
       <div class="form-group">
         <label for="ca">Burger model:</label>
-        <input type="text" id="ca" name="name">
+        <input id="newburger" type="text" name="name">
       </div>
 
-      <button type="submit">Submit</button>
+      <button class="submit_button" type="submit">Submit</button>
 
       <h3>Enter a burger you want to eat. Click the "Submit" button.</h3>
 
