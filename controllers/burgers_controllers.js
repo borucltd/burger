@@ -33,6 +33,24 @@ router.post("/api/burgers", function(req, res) {
       res.render("index", hbsObject);
     });
   });
+
+
+  // devour the burger
+router.put("/api/burgers/:id", function(req, res) {
+
+  
+
+  console.log("ddd"+req.body);
+    // col2, is_d, col1, bur_n, cb
+     burger.updateOne("devoured",req.body.devoured, "id", req.body.burger_id, function(data) {
+       var hbsObject = {
+         burgers: data
+       };
+       console.log(hbsObject);
+       // will reply with index 
+       res.render("index", hbsObject);
+     });
+  });
   
 
 module.exports = router

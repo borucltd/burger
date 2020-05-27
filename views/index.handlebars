@@ -4,10 +4,11 @@
   <div class="column">
 
     <h1>On the plate:</h1>
-
     
       {{#each burgers}}
-          {{> burgers/burger-block}}
+      {{#unless devoured }}
+        {{> burgers/burger-block}}
+      {{/unless}}
       {{/each}}
     
   </div>
@@ -36,6 +37,11 @@
   <div class="column">
 
     <h1>Eaten:</h1>
+      {{#each burgers}}
+      {{#if devoured }}
+        {{> burgers/devoured-burger-block}}
+      {{/if}}
+      {{/each}}
 
   </div>
 
