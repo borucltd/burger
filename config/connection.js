@@ -15,6 +15,7 @@ const connection = mysql.createConnection({
 // functions
 connection.connect(function (error) {
   if (error) {
+    console.log(process.env.RDS_HOSTNAME);
     console.log('error connecting: ' + error.stack);
   } else {
     console.log('connected as id ' + connection.threadId);
