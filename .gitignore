@@ -103,4 +103,5 @@ dist
 .tern-port
 
 INSTRUCTIONS.md
+.env
 
