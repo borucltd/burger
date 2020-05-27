@@ -1,12 +1,13 @@
 const mysql = require('mysql');
 
+
 // define connection with SSL
 const connection = mysql.createConnection({
-  host     : process.env.RDS_HOSTNAME || 'employeedb.cp4ki52legr7.ap-southeast-2.rds.amazonaws.com',
-  user     : process.env.RDS_USERNAME || 'burger_admin',
-  port     : process.env.RDS_PORT || 3306,
-  password : process.env.RDS_PASSWORD || ']t-7yYD/-b]*gs`t',
-  database : process.env.RDS_DATABASE || 'burger_db',
+  host     : process.env.RDS_HOSTNAME,
+  user     : process.env.RDS_USERNAME,
+  port     : process.env.RDS_PORT,
+  password : process.env.RDS_PASSWORD,
+  database : process.env.RDS_DATABASE,
   ssl      : 'Amazon RDS'
 });
 
